@@ -1,7 +1,7 @@
-import { Box, Text } from '@react-three/drei'
-import { Canvas } from '@react-three/fiber'
-import { Controllers, VRButton, XR } from '@react-three/xr'
-import { ComponentProps } from 'react'
+import { Box, Text } from "@react-three/drei";
+import { Canvas } from "@react-three/fiber";
+import { Controllers, ARButton, XR } from "@react-three/xr";
+import { ComponentProps } from "react";
 
 export function BoxText(props: ComponentProps<typeof Box>) {
   return (
@@ -11,13 +11,13 @@ export function BoxText(props: ComponentProps<typeof Box>) {
         Hello react-xr!
       </Text>
     </Box>
-  )
+  );
 }
 
 export default function () {
   return (
     <>
-      <VRButton />
+      <ARButton />
       <Canvas>
         <XR>
           <ambientLight intensity={0.5} />
@@ -27,5 +27,5 @@ export default function () {
         </XR>
       </Canvas>
     </>
-  )
+  );
 }
